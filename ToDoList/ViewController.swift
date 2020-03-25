@@ -11,12 +11,19 @@ import UIKit
 class ToDoViewController: UITableViewController {
     
     var toDoArray = ["Finish some work", "Rank up in league", "Keep it up"]
+    let defaults = UserDefaults.standard
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let newArray = defaults.array(forKey: "newToDoArray") as? [String] {
+            
+            toDoArray = newArray
+        }
     }
+    
+    // MARK - tableView delegate methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDoArray.count
@@ -40,13 +47,20 @@ class ToDoViewController: UITableViewController {
 
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
         var gTextField = UITextField()
+        
         let alert = UIAlertController(title: "Add a new to do", message: "", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
+            
             self.toDoArray.append(gTextField.text!)
+            
+            self.defaults.set(self.toDoArray, forKey: "newToDoArray")
+            
             self.tableView.reloadData()
         }
+        
         
         alert.addTextField { (textField) in
             textField.placeholder = "enter to do here"
