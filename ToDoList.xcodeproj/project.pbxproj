@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		530C14CA242DDF70004515D5 /* items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530C14C9242DDF70004515D5 /* items.swift */; };
 		5335030A2425FCF300342DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533503092425FCF300342DA2 /* AppDelegate.swift */; };
 		5335030C2425FCF300342DA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335030B2425FCF300342DA2 /* SceneDelegate.swift */; };
 		5335030E2425FCF300342DA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335030D2425FCF300342DA2 /* ViewController.swift */; };
 		533503112425FCF300342DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5335030F2425FCF300342DA2 /* Main.storyboard */; };
 		533503132425FCF500342DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533503122425FCF500342DA2 /* Assets.xcassets */; };
 		533503162425FCF500342DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533503142425FCF500342DA2 /* LaunchScreen.storyboard */; };
+		5373CDC32431DCF700EB5AA9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5373CDC12431DCF700EB5AA9 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		530C14C9242DDF70004515D5 /* items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = items.swift; sourceTree = "<group>"; };
 		533503062425FCF300342DA2 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		533503092425FCF300342DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5335030B2425FCF300342DA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		533503122425FCF500342DA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533503152425FCF500342DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533503172425FCF500342DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5373CDC22431DCF700EB5AA9 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		530C14CB242DDF75004515D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				530C14C9242DDF70004515D5 /* items.swift */,
+				5373CDC12431DCF700EB5AA9 /* DataModel.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530C14CA242DDF70004515D5 /* items.swift in Sources */,
+				5373CDC32431DCF700EB5AA9 /* DataModel.xcdatamodeld in Sources */,
 				5335030E2425FCF300342DA2 /* ViewController.swift in Sources */,
 				5335030A2425FCF300342DA2 /* AppDelegate.swift in Sources */,
 				5335030C2425FCF300342DA2 /* SceneDelegate.swift in Sources */,
@@ -364,6 +364,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5373CDC12431DCF700EB5AA9 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5373CDC22431DCF700EB5AA9 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 5373CDC22431DCF700EB5AA9 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 533502FE2425FCF200342DA2 /* Project object */;
 }
