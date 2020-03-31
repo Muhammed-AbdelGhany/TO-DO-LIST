@@ -14,6 +14,7 @@
 		533503132425FCF500342DA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533503122425FCF500342DA2 /* Assets.xcassets */; };
 		533503162425FCF500342DA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533503142425FCF500342DA2 /* LaunchScreen.storyboard */; };
 		5373CDC32431DCF700EB5AA9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5373CDC12431DCF700EB5AA9 /* DataModel.xcdatamodeld */; };
+		5373CDC524321C6500EB5AA9 /* CategoryViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373CDC424321C6500EB5AA9 /* CategoryViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		533503152425FCF500342DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533503172425FCF500342DA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5373CDC22431DCF700EB5AA9 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		5373CDC424321C6500EB5AA9 /* CategoryViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				5335030D2425FCF300342DA2 /* ViewController.swift */,
+				5373CDC424321C6500EB5AA9 /* CategoryViewControllerTableViewController.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5373CDC524321C6500EB5AA9 /* CategoryViewControllerTableViewController.swift in Sources */,
 				5373CDC32431DCF700EB5AA9 /* DataModel.xcdatamodeld in Sources */,
 				5335030E2425FCF300342DA2 /* ViewController.swift in Sources */,
 				5335030A2425FCF300342DA2 /* AppDelegate.swift in Sources */,

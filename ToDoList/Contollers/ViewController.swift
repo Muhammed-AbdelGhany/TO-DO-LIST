@@ -15,12 +15,16 @@ class ToDoViewController: UITableViewController {
     
     var toDoArray = [Item]()
     
+    var selectedCategory : Category? {
+        didSet{
+            loadItems()
+        }
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadItems()
         
     }
     
@@ -70,6 +74,7 @@ class ToDoViewController: UITableViewController {
             
             newItem.title = gTextField.text!
             newItem.done = false
+            newItem.parent = self.selectedCategory
             
             self.toDoArray.append(newItem)
             
@@ -104,9 +109,19 @@ class ToDoViewController: UITableViewController {
     
     //MARK: data loading
     
-    func loadItems(request : NSFetchRequest<Item> = Item.fetchRequest()){
+    func loadItems(request : NSFetchRequest<Item> = Item.fetchRequest() , predicet :NSPredicate? = nil){
         
-    
+        let categoryPredicate = NSPredicate(format: "parent.name MATCHES %@" , selectedCategory!.name!)
+        
+        if let additionalPredicate = predicet {
+            
+            let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate , additionalPredicate])
+            request.predicate = compoundPredicate
+        }
+        else {
+            request.predicate = categoryPredicate
+        }
+
     do{
         
    try toDoArray = context.fetch(request)
@@ -127,11 +142,11 @@ extension ToDoViewController : UISearchBarDelegate{
         
         let request : NSFetchRequest<Item> = Item.fetchRequest()
         
-        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
         
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
-        loadItems(request: request)
+        loadItems(request: request ,predicet: predicate )
         
         
     }
